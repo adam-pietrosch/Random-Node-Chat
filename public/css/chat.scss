@@ -1,0 +1,169 @@
+$cadet: #5d737eff;
+$sheen: #64b6acff;
+$celeste: #c0fdfbff;
+$aero: #daffefff;
+$white: #fcfffdff;
+$grey: #e6e6e6;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header {
+    position: fixed;
+    color: $white;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to right, #648ca0, $sheen);
+
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 8rem 0 6rem 0;
+    height: 100%;
+}
+.message {
+    width: 100%;
+    padding: .3rem;
+    overflow: hidden;
+
+    p {
+        padding: .8rem 1.2rem;
+        border-radius: 3rem;
+        display: inline-block;
+        max-width: 70%;
+    }
+    span {
+        color: grey;
+        display: none;
+    }
+
+    &:hover {
+        span {
+            display: inline-block;
+        }
+    }
+}
+.you {
+    p {
+        background: $grey;
+    }
+    span {
+        padding: .8rem;
+    }
+}
+.me {
+    p {
+        background: $cadet;
+        color: $white;
+        float: right;
+    }
+    span {
+        float: right;
+        padding: .8rem;
+    }
+}
+.info {
+    width: 100%;
+    padding: .3rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    hr {
+        border-top: 1px solid grey;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    p {
+        text-align: center;
+        color: grey;
+    }
+    a {
+        margin: auto;
+        text-decoration: none;
+        color: $white;
+        padding: .8rem 1.2rem;
+        background: $sheen;
+        border: none;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+    i {
+        color: grey;
+        margin-left: .6rem;
+        font-size: 1.1rem;
+    }
+}
+.input {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    textarea {
+        width: 50%;
+        border: 1px solid $cadet;
+        outline: none;
+        resize: none;
+        padding: .6rem;
+        height: 38px;
+    }
+
+    i {
+        margin-left: 1.2rem;
+        color: $sheen;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+    .input {
+        textarea {
+            width: 70%;
+        }
+    }
+    .header {
+        padding: 1.5rem;
+    }
+}
+@media screen and (max-width: 750px) {
+    .container {
+        width: 95%;
+    }
+    .input {
+        textarea {
+            width: 85%;
+        }
+    }
+    .header {
+        padding: 1.2rem;
+    }
+    .message {
+        p {
+            max-width: 85%;
+        }
+    }
+}

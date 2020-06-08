@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/css/chat.css">
+
+        <script>
+            const language = '<%= language %>'
+        </script>
+    </head>
+    <body>
+        
+        <div class="header">
+            <a href="/"><h1>Random Chat</h1></a>
+        </div>
+
+        <div class="container">
+            <div class="info" id="waiting">
+                <p>waiting for the user</p>
+            </div>
+
+        </div>
+        
+        <div class="input">            
+            <textarea id="mess-input" name="message" placeholder="message..." autofocus disabled></textarea>
+            <i class="material-icons">send</i>
+        </div>
+
+        
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/chat.js"></script>
+    </body>
+</html>

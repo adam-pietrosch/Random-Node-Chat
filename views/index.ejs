@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+
+        <div class="landing">
+
+            <h1>Random chat</h1>
+
+            <p>Choose your language:</p>
+
+
+            <div class="select">
+
+                <form action="/chat" method="GET">
+                    <input name="language" value="English" readonly>
+                </form>
+                
+                <i class="material-icons">arrow_drop_down</i>
+
+                <div class="dropdown">
+                    <% languages.forEach(lan => { %>
+                        <p><%= lan %></p>
+                    <% }) %>
+                </div>
+            </div>
+            
+
+            <button id="submit">Start</button>
+
+            <p class="version">v 1.0</p>
+
+        </div>
+
+        
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+        <script src="/js/index.js"></script>
+    </body>
+</html>
