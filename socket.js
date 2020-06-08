@@ -56,6 +56,7 @@ function socket(io) {
             const roomNumber = findRoom(socket.id)
             socket.to(roomNumber).emit('user disconnected')
             socket.leave(roomNumber)
+            if (!roomNumber) return
             rooms[roomNumber].splice(rooms[roomNumber].indexOf(socket.id), 1)
         });
     });
